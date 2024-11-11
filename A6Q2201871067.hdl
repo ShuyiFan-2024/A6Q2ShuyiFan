@@ -16,12 +16,12 @@ CHIP A6Q2201871067{
        
         And(a=b,b=notc,out=bandnotc);
         And(a=bandnotc,b=notd,out=z);
-        
+
         And(a=a,b=b,out=aandb);
         And(a=aandb,b=notc,out=h);
 
         Or(a=x,b=y,out=xory);
-        Or(a=xory,b=z,out=xoryorz);
-        Or(a=xoryorz,b=h,out=xoryorzorh);
+        Or(a=h,b=z,out=horz);
+        Or(a=xory,b=horz,out=xoryorzorh);
 
 }
